@@ -1,4 +1,3 @@
-
 function shouldBuyFidelity(times) {
   const ticket = 12
   const normal = (times * ticket);
