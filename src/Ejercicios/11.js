@@ -1,18 +1,20 @@
 function shouldBuyFidelity(times) {
   const ticket = 12
-  const normal = (times * ticket);
-  let discount
-  let acumulado = 0
+  let fidelity = 250
+  // const normal = (times * ticket);
+  // let discount
+  // let acumulado = 0
   for (let i = 1; i <= times; i++) {
-    if (i == 1) {
-      discount = ticket * .75
-    } else {
-      discount *= (.75)
-    }
-    acumulado += discount
+    // if (i == 1) {
+    //   discount = ticket * .75
+    // } else {
+    //   discount *= (.75)
+    // }
+    // acumulado += discount
+    fidelity += ticket*Math.pow(.75,i)
   }
-  const fidelity = (250 + acumulado);
-  return normal > fidelity ? true : false;
+  // const fidelity = (250 + acumulado);
+  return ticket *times > fidelity
 }
 
 console.log(shouldBuyFidelity(100))
